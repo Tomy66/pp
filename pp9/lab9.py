@@ -1,4 +1,11 @@
-##1. Wyświetl liczby podzielne przez 3,5 lub 7, ze zbioru liczb z zakresu okroślonego przez użytkownika
+# 1. Wyświetl tylko liczby podzielne przez 3, 5 lub 7, ze zbioru liczb z zakresu
+# określonego przez użytkownika.
+# 2. Udowodnij, że w zbiorze liczb z zakresu 1-100, jest 11 liczb, które są
+# parzyste i jednocześnie większe od 90, a gdy są nieparzyste, to
+# przynajmniej dzielą się przez 9.
+# 3. Napisz program wyznaczający wartość n-tego bitu dla dowolnej liczby
+# całkowitej. Bity liczymy od 0, od najmniej znaczącego bitu.
+
 
 range_from=int(input("od: "))
 range_to=int(input("do: "))

@@ -1,4 +1,13 @@
-# players = {"Tomek": [10,20,70], "Agata": [30,30,30]}
+# Zabezpiecz program zliczający punkty w grach (moduł 14, lab 3) przed
+# wprowadzaniem błędnych danych przez użytkownika.
+
+
+def fetch_and_validate(standard_msg, error_msg="To nie jest liczba"):
+    while True:
+        try:
+            return int(input(standard_msg))
+        except:
+            print(error_msg)
 
 def define_player(player_no):
     player_points = []
@@ -8,19 +17,15 @@ def define_player(player_no):
 
 def define_players():
     players = {}
-    players_total = int(input("Podaj liczbę graczy (1-8): "))
+    players_total = fetch_and_validate("Podaj liczbę graczy (1-8): ")
     for i in range(players_total):
         players.update(define_player(i + 1))
     return players
 
 
 def define_win_points():
-    return int(input("Zdefiniuj liczbę punktów wygranej: "))
-# Napisz program zliczający punkty w grach (karcianych, planszowych itp.), realizujący:
-# • definiowanie liczby oraz imion graczy,
-# • definiowanie liczby punktów potrzebnych do wygranej,
-# • pobieranie informacji o zdobytych punktach w każdej turze gry,
-# • wyświetlanie informacji o zwycięzcy oraz zdobytych punktach poszczególnych graczy.
+    return fetch_and_validate("Zdefiniuj liczbę punktów wygranej: ")
+
 
 def is_winer(players, win_points):
     for player in players.keys():
@@ -34,7 +39,7 @@ def count_points(players, win_points):
     while True:
         print("\nTura", counter)
         for player in players.keys():
-            player_points = int(input("Podaj punkty dla gracza - {}".format(player)))
+            player_points = fetch_and_validate("Podaj punkty dla gracza - {}".format(player))
             players[player].append(player_points)
             if is_winer(players, win_points):
                 return player

@@ -1,3 +1,10 @@
+# Napisz program, który zasymuluje 16 rzutów kostką do gry a następnie
+# wyświetli poniższe informacje:
+# • zestaw wylosowanych wyników,
+# • wyrzucaną wartość za 8 razem,
+# • liczbę wyrzuconych szóstek,
+# • maksymalną liczbę wyrzuconych tych samych wartości pod rząd.
+
 import random
 
 DICE_ROLLS_TOTAL = 16

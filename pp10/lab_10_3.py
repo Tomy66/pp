@@ -1,3 +1,8 @@
+#Napisz skrypt, który znajdzie najczęściej występującą cyfrę w zbiorze.
+# Np. w zbiorze [4, 1, 2, 9, 4, 4] najczęściej występującą cyfrą jest 4,
+# występuje 3 razy.
+
+
 digits = [1,2,3,4,1,2,3]
 frequency = [0,0,0,0,0,0,0,0,0,0]
 
